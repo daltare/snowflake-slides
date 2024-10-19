@@ -1,0 +1,143 @@
+---
+title: "Snowflake Demo"
+subtitle: "OIMA All-Staff Meeting"
+date: "October 23, 2024"
+execute:
+  echo: true
+  eval: false
+format:
+  revealjs: 
+    slide-number: true
+    chalkboard: 
+      buttons: true
+    preview-links: auto
+    logo: images/data_center_logo_square_crop_resize.png
+    css: styles.css
+    embed-resources: false
+---
+
+## What is Snowflake
+
+::: incremental
+- Cloud-based data storage, processing, and analysis
+
+- Demo
+
+  - Interface
+
+  - User roles and file structure
+:::
+
+## Accessing data in Snowflake
+
+::: incremental
+- Most users probably won't interact directly with the Snowflake interface
+
+- Instead use existing data tools
+
+  - BI Tools (Power BI, Tableau, ...)
+  
+  - Code (R, Python, ShinyApps, ...)
+:::
+  
+# Tableau Demo
+
+# R / Shiny Demo
+
+## R {auto-animate="true"}
+
+```{.r code-line-numbers="|6-16|17-29|30-34"}
+library(tidyverse)
+library(dbplyr)
+library(odbc)
+library(DBI)
+
+# snowflake connection (browser authentication) ----
+db_connection <- DBI::dbConnect(odbc::snowflake(), 
+                                authenticator = 'externalbrowser',
+                                account = Sys.getenv('YOUR_SNOWFALKE_ACCOUNT_VARIABLE'),
+                                server = Sys.getenv('YOUR_SNOWFALKE_SERVER_VARIABLE'), 
+                                UID = Sys.getenv('YOUR_SNOWFALKE_UID_VARIABLE'),
+                                role = 'YOUR_ROLE_NAME',
+                                warehouse = 'YOUR_WAREHOUSE_NAME',
+                                database = 'YOUR_DATABASE_NAME',
+                                schema = 'YOUR_SCHEMA_NAME')
+
+# get data (dbplyr) ----
+
+## connect to table ----
+con_table <- tbl(db_connection,
+                 in_schema('CEDEN',
+                           'WQDMART_MV'))
+                           
+## pull data (E. coli at American R station) ----
+data <- con_table %>% 
+  filter(ANALYTE == "E. coli", 
+         STATIONNAME == "American Sacramento Confluence at Tiscornia Beach") %>% 
+  collect()
+  
+# get data (SQL query) ----
+data <- dbGetQuery(db_connection,
+                         "SELECT * FROM CEDEN.WQDMART_MV 
+                         WHERE ANALYTE = 'E. coli' 
+                         AND STATIONNAME = 'American Sacramento Confluence at Tiscornia Beach'")
+```
+
+::: footer
+More Info: [Connecting to Snowflake](https://solutions.posit.co/connections/db/databases/snowflake/){preview-link="true" style="text-align: center"}
+:::
+
+## Shiny
+::: incremental
+- Can connect public Shiny Apps (R or Python) on [shinyapps.io](https://www.shinyapps.io/) to Snowflake data
+
+- [Demo](https://cawaterdatadive.shinyapps.io/Test_Snowflake_Connection/){preview-link="true" style="text-align: center"}
+
+- Requires some additional set-up with IT for managing credentials (key-pair authentication)
+
+- Resources
+
+  - [Connecting to Snowflake](https://docs.posit.co/shinyapps.io/guide/applications/#accessing-databases-with-odbc)
+
+  - [Managing credentials](https://docs.posit.co/shinyapps.io/guide/applications/#using-the-config-package) with [{config}](https://rstudio.github.io/config/)
+:::
+
+::: footer
+More Info: [Shiny](https://shiny.posit.co){preview-link="true" style="text-align: center"}
+:::
+
+## Automation
+
+::: incremental
+- Python / SQL worksheets
+
+- Scheduled tasks
+:::
+
+## Collaboration
+
+::: incremental
+- Sharing data
+
+- Collaborative coding
+:::
+
+## Open Data Publishing (data.ca.gov)
+
+::: incremental
+- Potential increase in reliability, frequency, capacity for updating open data
+
+- But there are some unknowns and possible limitations
+:::
+
+## Data Governance
+
+::: incremental
+- What is data governance?
+
+- ...
+:::
+
+# Q & A
+
+
