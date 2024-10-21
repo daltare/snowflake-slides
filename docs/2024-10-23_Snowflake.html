@@ -450,9 +450,9 @@
 <span id="cb1-6" class="hljs-ln-code"><a></a><span class="co"># snowflake connection (browser authentication) ----</span></span>
 <span id="cb1-7" class="hljs-ln-code"><a></a>db_connection <span class="ot">&lt;-</span> DBI<span class="sc">::</span><span class="fu">dbConnect</span>(odbc<span class="sc">::</span><span class="fu">snowflake</span>(), </span>
 <span id="cb1-8" class="hljs-ln-code"><a></a>                                <span class="at">authenticator =</span> <span class="st">'externalbrowser'</span>,</span>
-<span id="cb1-9" class="hljs-ln-code"><a></a>                                <span class="at">account =</span> <span class="fu">Sys.getenv</span>(<span class="st">'YOUR_SNOWFALKE_ACCOUNT_VARIABLE'</span>),</span>
-<span id="cb1-10" class="hljs-ln-code"><a></a>                                <span class="at">server =</span> <span class="fu">Sys.getenv</span>(<span class="st">'YOUR_SNOWFALKE_SERVER_VARIABLE'</span>), </span>
-<span id="cb1-11" class="hljs-ln-code"><a></a>                                <span class="at">UID =</span> <span class="fu">Sys.getenv</span>(<span class="st">'YOUR_SNOWFALKE_UID_VARIABLE'</span>),</span>
+<span id="cb1-9" class="hljs-ln-code"><a></a>                                <span class="at">account =</span> <span class="fu">Sys.getenv</span>(<span class="st">'YOUR_SNOWFLAKE_ACCOUNT_VARIABLE'</span>),</span>
+<span id="cb1-10" class="hljs-ln-code"><a></a>                                <span class="at">server =</span> <span class="fu">Sys.getenv</span>(<span class="st">'YOUR_SNOWFLAKE_SERVER_VARIABLE'</span>), </span>
+<span id="cb1-11" class="hljs-ln-code"><a></a>                                <span class="at">UID =</span> <span class="fu">Sys.getenv</span>(<span class="st">'YOUR_SNOWFLAKE_UID_VARIABLE'</span>),</span>
 <span id="cb1-12" class="hljs-ln-code"><a></a>                                <span class="at">role =</span> <span class="st">'YOUR_ROLE_NAME'</span>,</span>
 <span id="cb1-13" class="hljs-ln-code"><a></a>                                <span class="at">warehouse =</span> <span class="st">'YOUR_WAREHOUSE_NAME'</span>,</span>
 <span id="cb1-14" class="hljs-ln-code"><a></a>                                <span class="at">database =</span> <span class="st">'YOUR_DATABASE_NAME'</span>,</span>
@@ -485,7 +485,7 @@
 <ul>
 <li class="fragment"><p>Can connect public Shiny Apps (R or Python) hosted on <a href="https://www.shinyapps.io/">shinyapps.io</a> to Snowflake data</p></li>
 <li class="fragment"><p><a href="https://cawaterdatadive.shinyapps.io/Test_Snowflake_Connection/">Demo</a></p></li>
-<li class="fragment"><p>Requires some additional set-up with IT for managing credentials (<a href="https://docs.snowflake.com/en/user-guide/key-pair-auth" data-preview-link="false" target="_blank">key-pair authentication</a>)</p></li>
+<li class="fragment"><p>Requires some additional set-up with DIT for managing credentials (<a href="https://docs.snowflake.com/en/user-guide/key-pair-auth" data-preview-link="false" target="_blank">key-pair authentication</a>)</p></li>
 <li class="fragment"><p>Resources</p>
 <ul>
 <li class="fragment"><p><a href="https://docs.posit.co/shinyapps.io/guide/applications/#accessing-databases-with-odbc">Connecting Shiny Apps to Snowflake</a></p></li>

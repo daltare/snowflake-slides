@@ -56,9 +56,9 @@ library(DBI)
 # snowflake connection (browser authentication) ----
 db_connection <- DBI::dbConnect(odbc::snowflake(), 
                                 authenticator = 'externalbrowser',
-                                account = Sys.getenv('YOUR_SNOWFALKE_ACCOUNT_VARIABLE'),
-                                server = Sys.getenv('YOUR_SNOWFALKE_SERVER_VARIABLE'), 
-                                UID = Sys.getenv('YOUR_SNOWFALKE_UID_VARIABLE'),
+                                account = Sys.getenv('YOUR_SNOWFLAKE_ACCOUNT_VARIABLE'),
+                                server = Sys.getenv('YOUR_SNOWFLAKE_SERVER_VARIABLE'), 
+                                UID = Sys.getenv('YOUR_SNOWFLAKE_UID_VARIABLE'),
                                 role = 'YOUR_ROLE_NAME',
                                 warehouse = 'YOUR_WAREHOUSE_NAME',
                                 database = 'YOUR_DATABASE_NAME',
@@ -94,7 +94,7 @@ More Info: [Connecting R to Snowflake](https://solutions.posit.co/connections/db
 
 - [Demo](https://cawaterdatadive.shinyapps.io/Test_Snowflake_Connection/)
 
-- Requires some additional set-up with IT for managing credentials ([key-pair authentication](https://docs.snowflake.com/en/user-guide/key-pair-auth){preview-link="false" target="_blank"})
+- Requires some additional set-up with DIT for managing credentials ([key-pair authentication](https://docs.snowflake.com/en/user-guide/key-pair-auth){preview-link="false" target="_blank"})
 
 - Resources
 
