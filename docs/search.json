@@ -3,56 +3,63 @@
     "objectID": "2024-10-23_Snowflake.html#what-is-snowflake",
     "href": "2024-10-23_Snowflake.html#what-is-snowflake",
     "title": "Snowflake Demo",
-    "section": "What is Snowflake",
-    "text": "What is Snowflake\n\n\nCloud-based data storage, processing, and analysis\nDemo\n\nInterface\nUser roles and file structure"
+    "section": "What is Snowflake?",
+    "text": "What is Snowflake?\n\nCloud-based data storage, processing, and analysis\nDemo\n\nInterface\nUser roles and file structure"
   },
   {
     "objectID": "2024-10-23_Snowflake.html#accessing-data-in-snowflake",
     "href": "2024-10-23_Snowflake.html#accessing-data-in-snowflake",
     "title": "Snowflake Demo",
     "section": "Accessing data in Snowflake",
-    "text": "Accessing data in Snowflake\n\n\nMost users probably won’t interact directly with the Snowflake interface\nInstead use existing data tools\n\nBI Tools (Power BI, Tableau, …)\nCode (R, Python, ShinyApps, …)"
+    "text": "Accessing data in Snowflake\n\nMost users (probably) won’t interact directly with the Snowflake interface\nInstead use existing data tools\n\nBI Tools (Power BI, Tableau, …)\nCode (R, Python, ShinyApps, …)"
   },
   {
     "objectID": "2024-10-23_Snowflake.html#r",
     "href": "2024-10-23_Snowflake.html#r",
     "title": "Snowflake Demo",
     "section": "R",
-    "text": "R\nlibrary(tidyverse)\nlibrary(dbplyr)\nlibrary(odbc)\nlibrary(DBI)\n\n# snowflake connection (browser authentication) ----\ndb_connection &lt;- DBI::dbConnect(odbc::snowflake(), \n                                authenticator = 'externalbrowser',\n                                account = Sys.getenv('YOUR_SNOWFALKE_ACCOUNT_VARIABLE'),\n                                server = Sys.getenv('YOUR_SNOWFALKE_SERVER_VARIABLE'), \n                                UID = Sys.getenv('YOUR_SNOWFALKE_UID_VARIABLE'),\n                                role = 'YOUR_ROLE_NAME',\n                                warehouse = 'YOUR_WAREHOUSE_NAME',\n                                database = 'YOUR_DATABASE_NAME',\n                                schema = 'YOUR_SCHEMA_NAME')\n\n# get data (dbplyr) ----\n\n## connect to table ----\ncon_table &lt;- tbl(db_connection,\n                 in_schema('CEDEN',\n                           'WQDMART_MV'))\n                           \n## pull data (E. coli at American R station) ----\ndata &lt;- con_table %&gt;% \n  filter(ANALYTE == \"E. coli\", \n         STATIONNAME == \"American Sacramento Confluence at Tiscornia Beach\") %&gt;% \n  collect()\n  \n# get data (SQL query) ----\ndata &lt;- dbGetQuery(db_connection,\n                         \"SELECT * FROM CEDEN.WQDMART_MV \n                         WHERE ANALYTE = 'E. coli' \n                         AND STATIONNAME = 'American Sacramento Confluence at Tiscornia Beach'\")\n\nMore Info: Connecting to Snowflake"
+    "text": "R\n\nNeed DIT to install some software (Snowflake ODBC Driver)"
   },
   {
-    "objectID": "2024-10-23_Snowflake.html#shiny",
-    "href": "2024-10-23_Snowflake.html#shiny",
+    "objectID": "2024-10-23_Snowflake.html#r-1",
+    "href": "2024-10-23_Snowflake.html#r-1",
     "title": "Snowflake Demo",
-    "section": "Shiny",
-    "text": "Shiny\n\n\nCan connect public Shiny Apps (R or Python) on shinyapps.io to Snowflake data\nDemo\nRequires some additional set-up with IT for managing credentials (key-pair authentication)\nResources\n\nConnecting to Snowflake\nManaging credentials with {config}\n\n\n\n\nMore Info: Shiny"
+    "section": "R",
+    "text": "R\nlibrary(tidyverse)\nlibrary(dbplyr)\nlibrary(odbc)\nlibrary(DBI)\n\n# snowflake connection (browser authentication) ----\ndb_connection &lt;- DBI::dbConnect(odbc::snowflake(), \n                                authenticator = 'externalbrowser',\n                                account = Sys.getenv('YOUR_SNOWFALKE_ACCOUNT_VARIABLE'),\n                                server = Sys.getenv('YOUR_SNOWFALKE_SERVER_VARIABLE'), \n                                UID = Sys.getenv('YOUR_SNOWFALKE_UID_VARIABLE'),\n                                role = 'YOUR_ROLE_NAME',\n                                warehouse = 'YOUR_WAREHOUSE_NAME',\n                                database = 'YOUR_DATABASE_NAME',\n                                schema = 'YOUR_SCHEMA_NAME')\n\n# get data (dbplyr) ----\n\n## connect to table ----\ncon_table &lt;- tbl(db_connection,\n                 in_schema('CEDEN',\n                           'WQDMART_MV'))\n                           \n## pull data (E. coli at American R station) ----\ndata &lt;- con_table %&gt;% \n  filter(ANALYTE == \"E. coli\", \n         STATIONNAME == \"American Sacramento Confluence at Tiscornia Beach\") %&gt;% \n  collect()\n  \n# get data (SQL query) ----\ndata &lt;- dbGetQuery(db_connection,\n                         \"SELECT * FROM CEDEN.WQDMART_MV \n                         WHERE ANALYTE = 'E. coli' \n                         AND STATIONNAME = 'American Sacramento Confluence at Tiscornia Beach'\")\n\nMore Info: Connecting R to Snowflake"
+  },
+  {
+    "objectID": "2024-10-23_Snowflake.html#shiny-apps",
+    "href": "2024-10-23_Snowflake.html#shiny-apps",
+    "title": "Snowflake Demo",
+    "section": "Shiny Apps",
+    "text": "Shiny Apps\n\nCan connect public Shiny Apps (R or Python) hosted on shinyapps.io to Snowflake data\nDemo\nRequires some additional set-up with IT for managing credentials (key-pair authentication)\nResources\n\nConnecting Shiny Apps to Snowflake\nManaging credentials with the {config} package\n\n\n\nMore Info: Shiny Apps"
   },
   {
     "objectID": "2024-10-23_Snowflake.html#automation",
     "href": "2024-10-23_Snowflake.html#automation",
     "title": "Snowflake Demo",
     "section": "Automation",
-    "text": "Automation\n\n\nPython / SQL worksheets\nScheduled tasks"
+    "text": "Automation\n\nPython / SQL worksheets\nScheduled tasks"
   },
   {
     "objectID": "2024-10-23_Snowflake.html#collaboration",
     "href": "2024-10-23_Snowflake.html#collaboration",
     "title": "Snowflake Demo",
     "section": "Collaboration",
-    "text": "Collaboration\n\n\nSharing data\nCollaborative coding"
+    "text": "Collaboration\n\nSharing data\nCollaborative coding"
   },
   {
     "objectID": "2024-10-23_Snowflake.html#open-data-publishing-data.ca.gov",
     "href": "2024-10-23_Snowflake.html#open-data-publishing-data.ca.gov",
     "title": "Snowflake Demo",
     "section": "Open Data Publishing (data.ca.gov)",
-    "text": "Open Data Publishing (data.ca.gov)\n\n\nPotential increase in reliability, frequency, capacity for updating open data\nBut there are some unknowns and possible limitations"
+    "text": "Open Data Publishing (data.ca.gov)\n\nPotential increase in reliability, frequency, and capacity for publishing / maintaining open data\nBut there are some unknowns and possible limitations"
   },
   {
     "objectID": "2024-10-23_Snowflake.html#data-governance",
     "href": "2024-10-23_Snowflake.html#data-governance",
     "title": "Snowflake Demo",
     "section": "Data Governance",
-    "text": "Data Governance\n\n\nWhat is data governance?\n…"
+    "text": "Data Governance\n\nWhat is data governance?\n…"
   }
 ]

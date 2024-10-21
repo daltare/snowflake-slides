@@ -403,8 +403,7 @@
   <p class="date">2024-10-23</p>
 </section>
 <section id="what-is-snowflake" class="slide level2">
-<h2>What is Snowflake</h2>
-<div>
+<h2>What is Snowflake?</h2>
 <ul>
 <li class="fragment"><p>Cloud-based data storage, processing, and analysis</p></li>
 <li class="fragment"><p>Demo</p>
@@ -413,20 +412,17 @@
 <li class="fragment"><p>User roles and file structure</p></li>
 </ul></li>
 </ul>
-</div>
 </section>
 <section id="accessing-data-in-snowflake" class="slide level2">
 <h2>Accessing data in Snowflake</h2>
-<div>
 <ul>
-<li class="fragment"><p>Most users probably won’t interact directly with the Snowflake interface</p></li>
+<li class="fragment"><p>Most users (probably) won’t interact directly with the Snowflake interface</p></li>
 <li class="fragment"><p>Instead use existing data tools</p>
 <ul>
 <li class="fragment"><p>BI Tools (Power BI, Tableau, …)</p></li>
 <li class="fragment"><p>Code (R, Python, ShinyApps, …)</p></li>
 </ul></li>
 </ul>
-</div>
 </section>
 <section id="tableau-demo" class="title-slide slide level1 center">
 <h1>Tableau Demo</h1>
@@ -438,7 +434,13 @@
 <h1>R / Shiny Demo</h1>
 
 </section>
-<section id="r" class="slide level2" data-auto-animate="true">
+<section id="r" class="slide level2">
+<h2>R</h2>
+<ul>
+<li class="fragment">Need DIT to install some software (<a href="https://docs.snowflake.com/developer-guide/odbc/odbc" data-preview-link="false" target="_blank">Snowflake ODBC Driver</a>)</li>
+</ul>
+</section>
+<section id="r-1" class="slide level2" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">R</h2>
 <div class="sourceCode" id="cb1" data-code-line-numbers="|6-16|17-29|30-34"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb1-1" class="hljs-ln-code"><a></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb1-2" class="hljs-ln-code"><a></a><span class="fu">library</span>(dbplyr)</span>
@@ -475,62 +477,52 @@
 <span id="cb1-33" class="hljs-ln-code"><a></a><span class="st">                         WHERE ANALYTE = 'E. coli' </span></span>
 <span id="cb1-34" class="hljs-ln-code"><a></a><span class="st">                         AND STATIONNAME = 'American Sacramento Confluence at Tiscornia Beach'"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="footer">
-<p>More Info: <a href="https://solutions.posit.co/connections/db/databases/snowflake/" data-preview-link="true" style="text-align: center">Connecting to Snowflake</a></p>
+<p>More Info: <a href="https://solutions.posit.co/connections/db/databases/snowflake/">Connecting R to Snowflake</a></p>
 </div>
 </section>
-<section id="shiny" class="slide level2">
-<h2>Shiny</h2>
-<div>
+<section id="shiny-apps" class="slide level2">
+<h2>Shiny Apps</h2>
 <ul>
-<li class="fragment"><p>Can connect public Shiny Apps (R or Python) on <a href="https://www.shinyapps.io/">shinyapps.io</a> to Snowflake data</p></li>
-<li class="fragment"><p><a href="https://cawaterdatadive.shinyapps.io/Test_Snowflake_Connection/" data-preview-link="true" style="text-align: center">Demo</a></p></li>
-<li class="fragment"><p>Requires some additional set-up with IT for managing credentials (key-pair authentication)</p></li>
+<li class="fragment"><p>Can connect public Shiny Apps (R or Python) hosted on <a href="https://www.shinyapps.io/">shinyapps.io</a> to Snowflake data</p></li>
+<li class="fragment"><p><a href="https://cawaterdatadive.shinyapps.io/Test_Snowflake_Connection/">Demo</a></p></li>
+<li class="fragment"><p>Requires some additional set-up with IT for managing credentials (<a href="https://docs.snowflake.com/en/user-guide/key-pair-auth" data-preview-link="false" target="_blank">key-pair authentication</a>)</p></li>
 <li class="fragment"><p>Resources</p>
 <ul>
-<li class="fragment"><p><a href="https://docs.posit.co/shinyapps.io/guide/applications/#accessing-databases-with-odbc">Connecting to Snowflake</a></p></li>
-<li class="fragment"><p><a href="https://docs.posit.co/shinyapps.io/guide/applications/#using-the-config-package">Managing credentials</a> with <a href="https://rstudio.github.io/config/">{config}</a></p></li>
+<li class="fragment"><p><a href="https://docs.posit.co/shinyapps.io/guide/applications/#accessing-databases-with-odbc">Connecting Shiny Apps to Snowflake</a></p></li>
+<li class="fragment"><p><a href="https://docs.posit.co/shinyapps.io/guide/applications/#using-the-config-package">Managing credentials</a> with the <a href="https://rstudio.github.io/config/">{config}</a> package</p></li>
 </ul></li>
 </ul>
-</div>
 <div class="footer">
-<p>More Info: <a href="https://shiny.posit.co" data-preview-link="true" style="text-align: center">Shiny</a></p>
+<p>More Info: <a href="https://shiny.posit.co">Shiny Apps</a></p>
 </div>
 </section>
 <section id="automation" class="slide level2">
 <h2>Automation</h2>
-<div>
 <ul>
 <li class="fragment"><p>Python / SQL worksheets</p></li>
 <li class="fragment"><p>Scheduled tasks</p></li>
 </ul>
-</div>
 </section>
 <section id="collaboration" class="slide level2">
 <h2>Collaboration</h2>
-<div>
 <ul>
 <li class="fragment"><p>Sharing data</p></li>
 <li class="fragment"><p>Collaborative coding</p></li>
 </ul>
-</div>
 </section>
 <section id="open-data-publishing-data.ca.gov" class="slide level2">
 <h2>Open Data Publishing (data.ca.gov)</h2>
-<div>
 <ul>
-<li class="fragment"><p>Potential increase in reliability, frequency, capacity for updating open data</p></li>
+<li class="fragment"><p>Potential increase in reliability, frequency, and capacity for publishing / maintaining open data</p></li>
 <li class="fragment"><p>But there are some unknowns and possible limitations</p></li>
 </ul>
-</div>
 </section>
 <section id="data-governance" class="slide level2">
 <h2>Data Governance</h2>
-<div>
 <ul>
 <li class="fragment"><p>What is data governance?</p></li>
 <li class="fragment"><p>…</p></li>
 </ul>
-</div>
 </section></section>
 <section id="q-a" class="title-slide slide level1 center">
 <h1>Q &amp; A</h1>
@@ -568,7 +560,7 @@
       // https://revealjs.com/config/
       Reveal.initialize({
 'controlsAuto': true,
-'previewLinksAuto': true,
+'previewLinksAuto': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -697,7 +689,7 @@
         hideCursorTime: 5000,
 
         // Opens links in an iframe preview overlay
-        previewLinks: false,
+        previewLinks: true,
 
         // Transition style (none/fade/slide/convex/concave/zoom)
         transition: 'none',

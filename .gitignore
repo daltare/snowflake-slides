@@ -59,3 +59,5 @@ _ignore/
 ## ignore files that start with "scratch" in any directory
 **/scratch*.R
 snowflake_presentation_outline.docx
+
+/.quarto/

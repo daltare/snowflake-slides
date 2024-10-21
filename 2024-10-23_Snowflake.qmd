@@ -7,18 +7,18 @@ execute:
   eval: false
 format:
   revealjs: 
+    incremental: true
     slide-number: true
     chalkboard: 
       buttons: true
-    preview-links: auto
+    preview-links: true
     logo: images/data_center_logo_square_crop_resize.png
     css: styles.css
     embed-resources: false
 ---
 
-## What is Snowflake
+## What is Snowflake?
 
-::: incremental
 - Cloud-based data storage, processing, and analysis
 
 - Demo
@@ -26,23 +26,24 @@ format:
   - Interface
 
   - User roles and file structure
-:::
 
 ## Accessing data in Snowflake
 
-::: incremental
-- Most users probably won't interact directly with the Snowflake interface
+- Most users (probably) won't interact directly with the Snowflake interface
 
 - Instead use existing data tools
 
   - BI Tools (Power BI, Tableau, ...)
   
   - Code (R, Python, ShinyApps, ...)
-:::
   
 # Tableau Demo
 
 # R / Shiny Demo
+
+## R
+
+- Need DIT to install some software ([Snowflake ODBC Driver](https://docs.snowflake.com/developer-guide/odbc/odbc){preview-link="false" target="_blank"})
 
 ## R {auto-animate="true"}
 
@@ -84,59 +85,50 @@ data <- dbGetQuery(db_connection,
 ```
 
 ::: footer
-More Info: [Connecting to Snowflake](https://solutions.posit.co/connections/db/databases/snowflake/){preview-link="true" style="text-align: center"}
+More Info: [Connecting R to Snowflake](https://solutions.posit.co/connections/db/databases/snowflake/)
 :::
 
-## Shiny
-::: incremental
-- Can connect public Shiny Apps (R or Python) on [shinyapps.io](https://www.shinyapps.io/) to Snowflake data
+## Shiny Apps
 
-- [Demo](https://cawaterdatadive.shinyapps.io/Test_Snowflake_Connection/){preview-link="true" style="text-align: center"}
+- Can connect public Shiny Apps (R or Python) hosted on [shinyapps.io](https://www.shinyapps.io/) to Snowflake data
 
-- Requires some additional set-up with IT for managing credentials (key-pair authentication)
+- [Demo](https://cawaterdatadive.shinyapps.io/Test_Snowflake_Connection/)
+
+- Requires some additional set-up with IT for managing credentials ([key-pair authentication](https://docs.snowflake.com/en/user-guide/key-pair-auth){preview-link="false" target="_blank"})
 
 - Resources
 
-  - [Connecting to Snowflake](https://docs.posit.co/shinyapps.io/guide/applications/#accessing-databases-with-odbc)
+  - [Connecting Shiny Apps to Snowflake](https://docs.posit.co/shinyapps.io/guide/applications/#accessing-databases-with-odbc)
 
-  - [Managing credentials](https://docs.posit.co/shinyapps.io/guide/applications/#using-the-config-package) with [{config}](https://rstudio.github.io/config/)
-:::
+  - [Managing credentials](https://docs.posit.co/shinyapps.io/guide/applications/#using-the-config-package) with the [{config}](https://rstudio.github.io/config/) package
 
 ::: footer
-More Info: [Shiny](https://shiny.posit.co){preview-link="true" style="text-align: center"}
+More Info: [Shiny Apps](https://shiny.posit.co)
 :::
 
 ## Automation
 
-::: incremental
 - Python / SQL worksheets
 
 - Scheduled tasks
-:::
 
 ## Collaboration
 
-::: incremental
 - Sharing data
 
 - Collaborative coding
-:::
 
 ## Open Data Publishing (data.ca.gov)
 
-::: incremental
-- Potential increase in reliability, frequency, capacity for updating open data
+- Potential increase in reliability, frequency, and capacity for publishing / maintaining open data
 
 - But there are some unknowns and possible limitations
-:::
 
 ## Data Governance
 
-::: incremental
 - What is data governance?
 
 - ...
-:::
 
 # Q & A
 
