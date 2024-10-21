@@ -106,6 +106,8 @@ More Info: [Connecting R to Snowflake](https://solutions.posit.co/connections/db
 More Info: [Shiny Apps](https://shiny.posit.co)
 :::
 
+# Data Management & Governance
+
 ## Automation
 
 - Python / SQL worksheets
