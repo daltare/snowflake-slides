@@ -35,11 +35,11 @@ format:
 
   - BI Tools (Power BI, Tableau, ...)
   
-  - Code (R, Python, ShinyApps, ...)
+  - Code (R, Python, ...)
   
 # Tableau Demo
 
-# R / Shiny Demo
+# R Demo
 
 ## R
 
@@ -86,24 +86,6 @@ data <- dbGetQuery(db_connection,
 
 ::: footer
 More Info: [Connecting R to Snowflake](https://solutions.posit.co/connections/db/databases/snowflake/)
-:::
-
-## Shiny Apps
-
-- Can connect public Shiny Apps (R or Python) hosted on [shinyapps.io](https://www.shinyapps.io/) to Snowflake data
-
-- [Demo](https://cawaterdatadive.shinyapps.io/Test_Snowflake_Connection/)
-
-- Requires some additional set-up with DIT for managing credentials ([key-pair authentication](https://docs.snowflake.com/en/user-guide/key-pair-auth){preview-link="false" target="_blank"})
-
-- Resources
-
-  - [Connecting Shiny Apps to Snowflake](https://docs.posit.co/shinyapps.io/guide/applications/#accessing-databases-with-odbc)
-
-  - [Managing credentials](https://docs.posit.co/shinyapps.io/guide/applications/#using-the-config-package) with the [{config}](https://rstudio.github.io/config/) package
-
-::: footer
-More Info: [Shiny Apps](https://shiny.posit.co)
 :::
 
 # Data Management & Governance

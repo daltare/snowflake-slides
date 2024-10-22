@@ -57,7 +57,7 @@ _ignore/
 00_email/
 00_ignore/
 ## ignore files that start with "scratch" in any directory
-**/scratch*.R
+**/scratch*.*
 snowflake_presentation_outline.docx
 
 /.quarto/
