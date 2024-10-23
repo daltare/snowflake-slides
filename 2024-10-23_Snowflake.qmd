@@ -19,13 +19,17 @@ format:
 
 ## What is Snowflake?
 
+::: {.nonincremental}
+
 - Cloud-based data storage, processing, and analysis
 
 - Demo
 
   - Interface
 
-  - User roles and file structure
+  - File/object structure
+  
+:::
 
 ## Accessing data in Snowflake
 
@@ -92,15 +96,31 @@ More Info: [Connecting R to Snowflake](https://solutions.posit.co/connections/db
 
 ## Automation
 
+::: {.nonincremental}
+
 - Python / SQL worksheets
 
 - Scheduled tasks
 
+  - Run frequency (monthly, weekly, daily)
+  
+:::
+
 ## Collaboration
+
+::: {.nonincremental}
 
 - Sharing data
 
+  - User roles
+
 - Collaborative coding
+
+  - Python/SQL worksheets
+  
+  - GitHub integration
+  
+:::
 
 ## Open Data Publishing (data.ca.gov)
 
@@ -110,9 +130,23 @@ More Info: [Connecting R to Snowflake](https://solutions.posit.co/connections/db
 
 ## Data Governance
 
+::: {.nonincremental}
+
 - What is data governance?
 
-- ...
+  - A set of processes, policies, roles, and standards that ensure data is secure, accurate, and usable
+
+- Examples
+
+  - Organization of data
+  
+  - Sign offs and approvals
+  
+  - Compliance with security policies
+  
+- Work in progress
+
+:::
 
 # Q & A
 

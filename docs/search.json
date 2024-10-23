@@ -4,7 +4,7 @@
     "href": "2024-10-23_Snowflake.html#what-is-snowflake",
     "title": "Snowflake Demo",
     "section": "What is Snowflake?",
-    "text": "What is Snowflake?\n\nCloud-based data storage, processing, and analysis\nDemo\n\nInterface\nUser roles and file structure"
+    "text": "What is Snowflake?\n\n\nCloud-based data storage, processing, and analysis\nDemo\n\nInterface\nFile/object structure"
   },
   {
     "objectID": "2024-10-23_Snowflake.html#accessing-data-in-snowflake",
@@ -32,14 +32,14 @@
     "href": "2024-10-23_Snowflake.html#automation",
     "title": "Snowflake Demo",
     "section": "Automation",
-    "text": "Automation\n\nPython / SQL worksheets\nScheduled tasks"
+    "text": "Automation\n\n\nPython / SQL worksheets\nScheduled tasks\n\nRun frequency (monthly, weekly, daily)"
   },
   {
     "objectID": "2024-10-23_Snowflake.html#collaboration",
     "href": "2024-10-23_Snowflake.html#collaboration",
     "title": "Snowflake Demo",
     "section": "Collaboration",
-    "text": "Collaboration\n\nSharing data\nCollaborative coding"
+    "text": "Collaboration\n\n\nSharing data\n\nUser roles\n\nCollaborative coding\n\nPython/SQL worksheets\nGitHub integration"
   },
   {
     "objectID": "2024-10-23_Snowflake.html#open-data-publishing-data.ca.gov",
@@ -53,6 +53,6 @@
     "href": "2024-10-23_Snowflake.html#data-governance",
     "title": "Snowflake Demo",
     "section": "Data Governance",
-    "text": "Data Governance\n\nWhat is data governance?\n…"
+    "text": "Data Governance\n\n\nWhat is data governance?\n\nA set of processes, policies, roles, and standards that ensure data is secure, accurate, and usable\n\nExamples\n\nOrganization of data\nSign offs and approvals\nCompliance with security policies\n\nWork in progress"
   }
 ]
