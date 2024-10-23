@@ -4,7 +4,7 @@
     "href": "2024-10-23_Snowflake.html#what-is-snowflake",
     "title": "Snowflake Demo",
     "section": "What is Snowflake?",
-    "text": "What is Snowflake?\n\n\nCloud-based data storage, processing, and analysis\nDemo\n\nInterface\nFile/object structure"
+    "text": "What is Snowflake?\n\n\nCloud-based data storage, processing, and analysis\nDemo\n\nOnline interface\nFile/object structure"
   },
   {
     "objectID": "2024-10-23_Snowflake.html#accessing-data-in-snowflake",
@@ -32,7 +32,7 @@
     "href": "2024-10-23_Snowflake.html#automation",
     "title": "Snowflake Demo",
     "section": "Automation",
-    "text": "Automation\n\n\nPython / SQL worksheets\nScheduled tasks\n\nRun frequency (monthly, weekly, daily)"
+    "text": "Automation\n\n\nPython / SQL worksheets\nScheduled tasks\n\nRun frequency (monthly, weekly, daily)\n\nBut there are some unknowns and possible limitations"
   },
   {
     "objectID": "2024-10-23_Snowflake.html#collaboration",

@@ -25,7 +25,7 @@ format:
 
 - Demo
 
-  - Interface
+  - Online interface
 
   - File/object structure
   
@@ -103,6 +103,8 @@ More Info: [Connecting R to Snowflake](https://solutions.posit.co/connections/db
 - Scheduled tasks
 
   - Run frequency (monthly, weekly, daily)
+  
+- But there are some unknowns and possible limitations
   
 :::
 
